@@ -1,0 +1,8 @@
+*.pyc
+.DS_Store
+lib/
+keys.py
+client_secrets.json
+get_data.py
+is_appengine_config.py
+loc_data_up.py

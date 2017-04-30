@@ -1,0 +1,1 @@
+loc_data = [{'loc_name': 'savudrija', 'loc_coordinates': {'lat': 45.49251, 'lng': 13.5059259}, 'loc_country': 'croatia'}, {'loc_name': 'freiburg', 'loc_coordinates': {'lat': 47.9990077, 'lng': 7.842104299999999}, 'loc_country': 'germany'}, {'loc_name': 'pulingui san pablo', 'loc_coordinates': {'lat': -1.562026, 'lng': -78.804163}, 'loc_country': 'ecuador'}]

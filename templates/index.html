@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>My map</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript">
+  var all_locations = []
+  {% for l in locations %}
+    all_locations.push([{{l.loc_coordinates.lat}}, {{l.loc_coordinates.lng}},"{{l.loc_name}}, {{l.loc_country}}"]);
+  {% endfor %}
+  </script>
+</head>
+<body>
+  <div id="map"></div>
+  <!--google maps js-->
+  <script src="{{google_maps_url}}"></script>
+  <!-- marker manager script-->
+  <script src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/markermanager/src/markermanager.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>

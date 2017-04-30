@@ -1,0 +1,109 @@
+api_response_dict = api_response.json()
+    # if location is ok set it as the new coordinates
+    if api_response_dict['status'] == 'OK':
+        latitude = api_response_dict['results'][0]['geometry']['location']['lat']
+        longitude = api_response_dict['results'][0]['geometry']['location']['lng']
+        print api_response_dict['results'][0]['geometry']['location']
+        print api_response_dict
+        target = [latitude, longitude, location]
+    else:
+        print api_response_dict
+
+
+  try:
+        result = urlfetch.fetch(url=url, validate_certificate = True)
+        if result.status_code == 200:
+            print response.write(result.content)
+        else:
+            print result.status_code
+    except urlfetch.Error:
+        print "shit"
+
+488088910042-mnqb35vcdmqi5aj3gpfpvmfl9lh2uvu0.apps.googleusercontent.com
+65yUis0cGGAFvi3pDIzImkMb
+
+from oauth2client import client, crypt
+
+<meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="488088910042-mnqb35vcdmqi5aj3gpfpvmfl9lh2uvu0.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <script>
+    function onSignIn(googleUser) {
+      // Useful data for your client-side scripts:
+      var profile = googleUser.getBasicProfile();
+      console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+      console.log('Full Name: ' + profile.getName());
+      console.log('Given Name: ' + profile.getGivenName());
+      console.log('Family Name: ' + profile.getFamilyName());
+      console.log("Image URL: " + profile.getImageUrl());
+      console.log("Email: " + profile.getEmail());
+
+      // The ID token you need to pass to your backend:
+      var id_token = googleUser.getAuthResponse().id_token;
+      console.log("ID Token: " + id_token);
+    };
+
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+    }
+  </script>
+
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  <a href="#" onclick="signOut();">Sign out</a>
+
+
+
+    <!-- maybe future
+
+    <p>Insert coordinates:</p>
+    <input type="text" id="lat" placeholder="Latitude">
+    <input type="text" id="lng" placeholder="Longitude">
+    <input type="submit">
+  -->
+
+
+
+
+
+
+  from google.appengine.api import users
+
+        user = users.get_current_user()
+        if user:
+            nickname = user.nickname()
+            logout_url = users.create_logout_url('/')
+            greeting = 'Welcome, {}! (<a href="{}">sign out</a>)'.format(
+                nickname, logout_url)
+        else:
+            login_url = users.create_login_url('/')
+            greeting = '<a href="{}">Sign in</a>'.format(login_url)
+
+        return self.response.write(
+            '<html><body>{}</body></html>'.format(greeting))
+
+
+        user_id = 112574227660621901721
+        print userid
+        if userid == user_id:
+            print "Can edit"
+        else:
+            print "can't edit"
+
+https://developers.google.com/maps/documentation/javascript/adding-a-google-map
+
+
+
+curl -X PUT -curl -X PUT -d '{
+    "graz": {
+        "location_country": "Austria",
+        "location_coordinates": {
+            "lat": 47.075611,
+            "lng": 15.436723
+        },
+        "location_name": "graz"
+    }
+}' "https://kalindi-fonda.firebaseio.com/location.json"
