@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# encoding: utf-8
 
 import os
 import webapp2
@@ -66,7 +68,7 @@ def get_template_values(template):
 
 def get_loc_info(loc_input):
     api_key = keys.api_key
-    url = 'https://maps.googleapis.com/maps/api/geocode/json?address={0}&key={1}'.format(urllib.quote(loc_input, safe=''), api_key)
+    url = 'https://maps.googleapis.com/maps/api/geocode/json?address={0}&key={1}'.format(urllib.quote(loc_input.encode('utf-8'), safe=''), api_key)
     result = urlfetch.fetch(url=url, validate_certificate = False).content
     result = ast.literal_eval(result)
     try:
@@ -95,7 +97,6 @@ class Page(webapp2.RequestHandler):
 
         loc_full_name = self.request.get("location")
         loc_info = get_loc_info(loc_full_name)
-
         location = Location(
             loc_name = loc_info["loc_name"],
             loc_country = loc_info["loc_country"],

@@ -6,14 +6,13 @@ As part one of the projects of the Front end Nanodegree, we had to do a resume, 
 
 ##### Idea:
 BUGS:
-	- TODO: names with strange chars
-	- TODO: error when empty city name
-	- TODO: input if only words, not selected from list, adds both info to name and country
+- TODO: error when empty city name
+- TODO: input if only words, not selected from list, adds both info to name and country
 
 
 Map with markers view page
- 	- TODO: info windows
- 	- later: maybe some send me suggestions functionality, or add places for me
+- TODO: info windows
+- later: maybe some send me suggestions functionality, or add places for me
 
 Input area:
 - protected by some auth (maybe google login)
