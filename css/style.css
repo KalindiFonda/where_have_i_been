@@ -1,13 +1,17 @@
 body {
-	max-width: 600px;
-	margin: 0 auto;
+	max-width: 1050px;
+	margin: 10px auto;
 }
 
 #map {
-  height: 400px;
-  width: 600px;
+  height: 700px;
+  width: 1050px;
 }
 
 p {
 	color: red;
+}
+
+.place-field {
+	width: 400px;
 }

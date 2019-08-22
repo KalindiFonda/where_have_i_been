@@ -1,6 +1,6 @@
 function initMap() {
     var myOptions = {
-        zoom: 1,
+        zoom: 2,
         center: new google.maps.LatLng(0,0),
         mapTypeId: google.maps.MapTypeId.HYBRID
     };
